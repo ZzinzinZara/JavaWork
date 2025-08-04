@@ -24,7 +24,7 @@ public class T03_printf {
 		System.out.printf("%c\n",'a');
 		
 		// 문자열 출력
-		System.out.printf("%s\n", "씨발 집 존나 가고 싶네;;");
+		System.out.printf("%s\n", "집 가고 싶다.");
 		
 		// boolean 출력
 		System.out.printf("%b\n", false);
