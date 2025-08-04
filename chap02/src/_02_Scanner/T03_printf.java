@@ -30,8 +30,10 @@ public class T03_printf {
 		System.out.printf("%b\n", false);
 		System.out.printf("%b\n", 100>3);
 		
-		System.out.printf("현재는 %d년 %d이고, 우리나라의 평균 온도는 %.1f도 입니다.\n",2025,8,34.5);
-		System.out.printf("이 과정의 정원은 %d명이고, 현재 %d명이 수강중입니다. %s 달성하였습니다.\n",25,19,"76%");
+		System.out.format("현재는 %d년 %d이고, 우리나라의 평균 온도는 %.1f도 입니다.\n",2025,8,34.5);
+		System.out.printf("이 과정의 정원은 %d명이고, 현재 %d명이 수강중입니다. %d%% 달성하였습니다.\n",25,19,76); 
+		// printf나 format이나 똑같다
+		// %% 이렇게 쓰면 %를 출력하시오가 됨
 	}
 
 }
