@@ -21,11 +21,10 @@ public class T02_Ex01 {
 		
 		int total = ko + com + ma;
 		
-		int avg = total / 3; 
+		double avg = total / 3; 
 		
 		System.out.println("총점: "+total);
 		System.out.println("평균: "+avg);
-
 	}
 
 }
