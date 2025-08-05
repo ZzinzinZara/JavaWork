@@ -6,25 +6,28 @@ public class T02_Ex01 {
 	// static 변수를 사용할거면 main 밖에서 해야 됨
 
 	public static void main(String[] args) {
-		/*
-		 * Scanner s = new Scanner(System.in); // 1. 문자 하나를 입력받아 그 문자의 유니코드를 출력하기
-		 * System.out.println("문자를 입력하세요 >> "); char ch1 = s.next().charAt(0);
-		 * System.out.println((int)ch1);
-		 * 
-		 * 
-		 * // 2. 국어, 컴퓨터, 수학 점수를 입력받아 저장하고, 총점과 평균을 출력 System.out.print("국어 점수 >> ");
-		 * int ko = s.nextInt();
-		 * 
-		 * System.out.print("컴퓨터 점수 >> "); int com = s.nextInt();
-		 * 
-		 * System.out.print("수학 점수 >> "); int ma = s.nextInt();
-		 * 
-		 * int total = ko + com + ma;
-		 * 
-		 * double avg = total / 3;
-		 * 
-		 * System.out.println("총점: "+total); System.out.printf("평균: %.2f",avg);
-		 */
+		Scanner s = new Scanner(System.in); 
+		
+		  // 1. 문자 하나를 입력받아 그 문자의 유니코드를 출력하기
+		  System.out.println("문자를 입력하세요 >> "); 
+		  char ch1 = s.next().charAt(0);
+		  System.out.println((int)ch1);
+		  
+		  
+		  // 2. 국어, 컴퓨터, 수학 점수를 입력받아 저장하고, 총점과 평균을 출력 
+		  System.out.print("국어 점수 >> ");
+		  int ko = s.nextInt();		
+		  System.out.print("컴퓨터 점수 >> "); 
+		  int com = s.nextInt();
+		  System.out.print("수학 점수 >> "); 
+		  int ma = s.nextInt();
+		  
+		  int total = ko + com + ma;
+		  
+		  double avg = total / 3;
+		  
+		  System.out.println("총점: "+total); System.out.printf("평균: %.2f",avg);
+		 
 		
 		// 3.
 		int iNum1 =10;
