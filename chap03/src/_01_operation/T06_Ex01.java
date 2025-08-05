@@ -15,6 +15,7 @@ public class T06_Ex01 {
 			System.out.print("정수를 입력하세요 >> ");
 			int n1 = s.nextInt();
 			char ch1 = n1 > 0 ? '양':'음';
+			System.out.println(ch1);
 			System.exit(1);
 		}
 		
@@ -23,7 +24,11 @@ public class T06_Ex01 {
 			s.nextLine();
 			System.out.print("정수를 입력하세요 >> ");
 			int n2 = s.nextInt();
-			char ch2 = n2 > 0 ? '양':'음';
+			System.out.println(n2 > 0 ? "양수" : n2 == 0 ? "0" : "음수");
+			/*
+			 * if(n2>0) System.out.println("양수"); else if(n2 == 0) System.out.println("0");
+			 * else System.out.println("음수");
+			 */
 			System.exit(1);
 		}
 		
@@ -45,10 +50,10 @@ public class T06_Ex01 {
 			 */
 			s.nextLine();
 			System.out.print("사탕 개수를 입력하세요 >> ");
-			int n4 = s.nextInt();
+			int candy = s.nextInt();
 			System.out.print("인원수를 입력하세요 >> ");
-			int n5= s.nextInt();
-			System.out.printf("1인당 %d개의 사탕, %d 남음",n4/n5, n4%n5);
+			int human= s.nextInt();
+			System.out.printf("1인당 %d개의 사탕, %d 남음",candy/human, candy%human);
 			System.exit(1);
 		}
 		
@@ -83,13 +88,11 @@ public class T06_Ex01 {
 			s.nextLine();
 			System.out.print("나이를 입력하세요 >> ");
 			int age = s.nextInt();
+			System.out.println(age < 14 ? "어린이":age>13 && age<20 ? "청소년":"성인");
 			/*
-			 * String str1 = age >= 13 ? "어린이" : 14 <= age <= 19 ? "청소년": age >= 20 ?
-			 * "성인":"뭐냐?";
+			 * if(age <= 13) System.out.println("어린이"); else if(14 <= age && 19 >= age)
+			 * System.out.println("청소년"); else System.out.println("성인");
 			 */
-			if(age <= 13) System.out.println("어린이");
-			else if(14 <= age && 19 <= age) System.out.println("청소년");
-			else System.out.println("성인");
 			System.exit(1);
 		}
 		
@@ -98,14 +101,12 @@ public class T06_Ex01 {
 			// 세 과목 점수가 각각 40점 이상이면서 평균이 60점 이상일 때 합격, 아니라면 불합격을 출력.
 			
 			s.nextLine();
-			System.out.print("국어 점수 >> ");
+			System.out.print("국어, 영어, 수학 점수 순서대로 입력 >> ");
 			int ko = s.nextInt();
-			System.out.print("영어 점수 >> ");
 			int en = s.nextInt();
-			System.out.print("수학 점수 >> ");
 			int ma = s.nextInt();
 			
-			double avg = (ko+en+ma)/3;
+			double avg = (ko+en+ma)/3.0; // 3으로 입력하면 소숫점 날라감
 			
 			String result1 = ko>39 && en>39 && ma>39 && avg >59 ? "합격" : "불합격";
 			System.out.println(result1);
@@ -118,24 +119,22 @@ public class T06_Ex01 {
 			System.out.print("주민번호를 '-' 포함해서 입력하세요 >> ");
 			String numnum = s.nextLine();
 			char cch = numnum.charAt(7);
-			String gen = cch==1 || cch==3 ? "남자":"여자";
+			String gen = cch=='1' || cch=='3' ? "남자":"여자";
 			System.out.println(gen);
 			System.exit(1);
 		}
 		
 		if(n==9) {
 			// 9.  사용자로부터 두 개를 입력 받아 num1, num2에 저장하고
-		    // 또 다른 정수를 입력 받아 그 수가 num1 미만거나 num2 초과이면 true를 출력하고
+		    // 또 다른 정수를 입력 받아 그 수가 num1 미만이거나 num2 초과이면 true를 출력하고
 		    // 아니면 false를 출력. (단, num1은 num2보다 작아야 함)
 			s.nextLine();
-			System.out.print("첫 번째 정수를 입력하세요 >> ");
+			System.out.print("정수 세 개를 입력하세요(공백으로 분리) >> ");
 			int nn1 = s.nextInt();
-			System.out.print("두 번째 정수를 입력하세요 >> ");
 			int nn2 = s.nextInt();
-			System.out.print("세 번째 정수를 입력하세요 >> ");
 			int nn3 = s.nextInt();
 			
-			boolean bo = nn3 < nn1 || nn3 > nn2 ? true : false;
+			boolean bo = nn3 < nn1 || nn3 > nn2;
 			System.out.println(bo);
 			System.exit(1);
 		}
@@ -145,14 +144,12 @@ public class T06_Ex01 {
 		    // 입력 받은 수가 모두 같으면 true, 아니면 false를 출력
 			
 			s.nextLine();
-			System.out.print("첫 번째 정수를 입력하세요 >> ");
+			System.out.print("정수 세 개를 입력하세요(공백으로 분리) >> ");
 			int nn1 = s.nextInt();
-			System.out.print("두 번째 정수를 입력하세요 >> ");
 			int nn2 = s.nextInt();
-			System.out.print("세 번째 정수를 입력하세요 >> ");
 			int nn3 = s.nextInt();
 			
-			boolean bo = nn1 == nn2 && nn1 == nn3 ? true : false;
+			boolean bo = nn1 == nn2 && nn1 == nn3;
 			System.out.println(bo);
 			System.exit(1);
 		}
