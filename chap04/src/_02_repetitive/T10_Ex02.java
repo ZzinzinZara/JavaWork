@@ -89,13 +89,17 @@ public class T10_Ex02 {
 		// 7.
 		if(n==7) {
 			s.nextLine();
-			for(int i=1;i<6;i++) {
-				System.out.printf("    ");
-				for(int j=1;j<=9;j+=2) {
-					System.out.printf("*");
-				}
-				System.out.printf("\n");
-			}
+			for (int i = 1; i <= 5; i++) {
+	            // 공백 출력
+	            for (int j = 1; j <= 5 - i; j++) {
+	                System.out.print(" ");
+	            }
+	            // 별 출력
+	            for (int k = 1; k <= 2 * i - 1; k++) {
+	                System.out.print("*");
+	            }
+	            System.out.println();
+	        }
 		}
 		
 		if(n==8) {
