@@ -150,7 +150,7 @@ public class T06_Ex01 {
 			int nn3 = s.nextInt();
 			
 			boolean bo = nn1 == nn2 && nn1 == nn3;
-			System.out.println(bo);
+			System.out.println("세 개의 숫자가 모두 같은가? "+ bo);
 			System.exit(1);
 		}
 		
