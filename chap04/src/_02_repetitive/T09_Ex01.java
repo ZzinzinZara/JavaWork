@@ -32,8 +32,9 @@ public class T09_Ex01 {
 		
 		if(n==2) {
 			s.nextLine();
-			System.out.printf("아이디와 비밀번호를 차례대로 입력하세요 >> ");
+			System.out.printf("아이디를 입력하세요 >> ");
 			String id = s.nextLine();
+			System.out.printf("비밀번호를 입력하세요 >> ");
 			String pass = s.nextLine();
 			
 			System.out.printf("아이디를 입력하세요 >> ");
@@ -41,8 +42,10 @@ public class T09_Ex01 {
 			System.out.printf("비밀번호를 입력하세요 >> ");
 			String pass1 = s.nextLine();
 			
-			if(id != id1) System.out.printf("아이디가 틀렸습니다\n");
-			if(pass != pass1) System.out.printf("비밀번호가 틀렸습니다\n");
+			// 내용이 동일한지 비교를 할 때는 equals를 써야 된다. "=="를 쓰면 내용이 아니라 주소가 같냐고 물어보는 것
+			if(!id.equals(id1)) System.out.printf("아이디가 틀렸습니다\n");
+			if(!pass.equals(pass1)) System.out.printf("비밀번호가 틀렸습니다\n");
+			
 			else System.out.printf("로그인 성공\n");
 		}
 		
