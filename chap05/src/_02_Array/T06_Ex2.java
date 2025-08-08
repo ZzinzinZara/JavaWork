@@ -114,10 +114,13 @@ public class T06_Ex2 {
 			s.nextLine();
 			System.out.printf("3이상인 홀수 자연수를 입력하세요 >> ");
 			int nn = s.nextInt();
+			if(nn%2==0||nn<3) {
+				System.out.printf("잘못 입력");
+				System.exit(1);
+			}
 			int arr[] = new int[nn];
 			int length = arr.length;
-			int i =0;
-			int count=0;
+			int i=0, count=0;
 			for(i=0;i<(length/2)+1;i++) {
 				arr[i]=i;
 			}
@@ -136,10 +139,16 @@ public class T06_Ex2 {
 			String arr[] = {"굽네","bhc","bbq"};
 			System.out.printf("치킨 이름을 입력하세요 >> ");
 			String ch=s.nextLine();
-			
-			for(int i=0;i<arr.length;i++) {
-				if(arr[i].equals(ch)) System.out.printf("%s치킨 배달가능",ch);
+			int count=0;
+			while(count<arr.length) {
+				if(arr[count].equals(ch)) {
+					System.out.printf("%s치킨 배달가능",ch);
+					System.exit(1);
+				}
+				count++;
 			}
+			System.out.printf("%s치킨은 없는 메뉴\n",ch);
+			
 		}
 		
 		// 10. 10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
@@ -164,17 +173,23 @@ public class T06_Ex2 {
 		if(n==11) {
 			s.nextLine();
 			int arr[] = new int[5];
+			int i,j,temp;
 			System.out.printf("정수 다섯개를 입력하세요 >> ");
-			for(int i=0;i<5;i++) {
+			for(i=0;i<5;i++) {
 				arr[i] = s.nextInt();
 			}
-			for(int i=0;i<4;i++) {
-				if(arr[i] > arr[i+1]) {
-					int temp = arr[i];
-					arr[i] = arr[i+1];
-					arr[i+1] = temp;
-				}
-			}
+			// 버블 정렬 알고리즘
+			for(i=arr.length-1; i>0; i--){
+			    // 0 ~ (i-1)까지 반복
+			    for(j=0; j<i; j++){
+			      // j번째와 j+1번째의 요소가 크기 순이 아니면 교환
+			      if(arr[j]>arr[j+1]){
+			        temp = arr[j];
+			        arr[j] = arr[j+1];
+			        arr[j+1] = temp;
+			      }
+			    }
+			  }
 			System.out.println(Arrays.toString(arr));
 		}
 		
