@@ -6,15 +6,14 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		int n1 = s.nextInt();
-		int n2 = s.nextInt();
-		int n3 = s.nextInt();
+		int sum[] = new int[10];
+		int n1 = 0, n2=0, count=0;
+		while(n1!=0&n2!=0) {
+			n1 = s.nextInt();
+			n2 = s.nextInt();
+			sum[count] = n1+n2;
+			count++;
+		}
 		
-		int sum=n2+n3;
-		int fin=sum%60;
-		n1 += sum/60;
-		n1 %= 24;
-		
-		System.out.printf("%d %d\n",n1,fin);
 	}
 }
