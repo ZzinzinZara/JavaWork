@@ -184,17 +184,24 @@ public class T06_Ex2 {
 		if(n==12) {
 			s.nextLine();
 			int arr[][]=new int[2][6];
-			int sum=0, avg=0;
-			System.out.printf("번호 국어 영어 수학점수를 차례대로 입력하세요 >> \n");
+			System.out.printf("번호 국어 영어 수학 점수를 차례대로 입력하세요 >> \n");
 			for(int i=0;i<arr.length;i++) {
+				int sum=0;
+				int avg=0;
 				for(int j=0;j<4;j++) {
 					arr[i][j]=s.nextInt();
+					if(j>0 && j<4) {
+						sum += arr[i][j];
+					}
+					arr[i][4] = sum;
+					arr[i][5] = sum/3;
 				}
 			}
 			
+			System.out.printf("번호 국어 영어 수학 총점 평균\n");
 			for(int i=0;i<arr.length;i++) {
 				for(int j=0;j<arr[i].length;j++) {
-					System.out.printf("%d ",arr[i][j]);
+					System.out.printf("%03d ",arr[i][j]);
 				}
 				System.out.printf("\n");
 			}
