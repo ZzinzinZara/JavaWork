@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BookMain {
 
 	public static void main(String[] args) {
+		int n=0;
 		Lib lib = new Lib();
 		Scanner s = new Scanner(System.in);
 		System.out.printf("책 이름을 입력하세요 >> ");
