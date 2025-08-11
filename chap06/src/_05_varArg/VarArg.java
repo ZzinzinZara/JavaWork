@@ -8,6 +8,8 @@ public class VarArg {
 		// static을 붙이면 됨
 		method1("남궁","용진","짱짱","맨");
 		method1("집","가고","싶어","맨");
+		String arr[] = {"a","b","c","d"};
+		method1(arr);
 	}
 	
 	void method(String s1) {
@@ -20,11 +22,10 @@ public class VarArg {
 		System.out.printf("%s %s %s\n",s1,s2,s3);
 	}
 	
-	static void method1(String...str) {
+	static void method1(String...str) { // ... 쓰면 몇개 들어가도 상관이 없다
 		for(String s : str) {
 			System.out.printf("%s ",s);
 		}
 		System.out.printf("\n");
 	}
-
 }
