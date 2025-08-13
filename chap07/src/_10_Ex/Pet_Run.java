@@ -9,12 +9,12 @@ public class Pet_Run {
 		p1.sound();
 		p1.info();
 		System.out.printf("종류: %s, 색상: %s, 특징: %s\n",p1.getKind(),p1.getColor(),p1.getFeature());
-		System.out.println(p1.toString());
+		System.out.println(p1);
 		System.out.printf("\n");
 		p2.sound();
 		p2.info();
 		System.out.printf("종류: %s, 색상: %s, 특징: %s\n",p2.getKind(),p2.getColor(),p2.getFeature());
-		System.out.println(p2.toString());
+		System.out.println(p2); //p2.toString()으로 쓰는게 아니라 p2로 쓰면 주소 대신 텍스트가 나옴
 	}
 }
 
@@ -36,6 +36,7 @@ class Pet {
 		System.out.printf("허허허허!!\n");
 	}
 	
+	// toString 있으니까 info 함수(출력함수)가 굳이 필요하진 않다.
 	void info() {
 		System.out.printf("종류: %s, 색상: %s, 특징: %s\n",this.kind, this.color, this.feature);
 	}
