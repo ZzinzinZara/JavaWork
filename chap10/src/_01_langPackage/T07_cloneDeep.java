@@ -1,5 +1,6 @@
 package _01_langPackage;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 class Point3 implements Cloneable {
@@ -85,6 +86,45 @@ public class T07_cloneDeep {
 		
 		str[0] = "a";
 		System.out.println("str: "+Arrays.toString(str));
+		System.out.printf("======================================\n");
+		
+		// 2. Arrays.copyOf(원본 배열, 복사할 길이)
+		String[] arrayCopy = Arrays.copyOf(str,str.length);
+		System.out.println("str: "+Arrays.toString(str));
+		System.out.println("arrayCopy: "+Arrays.toString(arrayCopy));
+		System.out.printf("======================================\n");
+		
+		arrayCopy[2] = "z";
+		System.out.println("str: "+Arrays.toString(str));
+		System.out.println("arrayCopy: "+Arrays.toString(arrayCopy));
+		System.out.printf("======================================\n");
+		
+		// 3. clone()
+		Circle c1 = new Circle(new Point3(5,10),3);
+		Circle c2 = c1.clone();
+		
+		System.out.println(c1);
+		System.out.println(c2);
+		System.out.printf("======================================\n");
+		
+		c1.r = 100;
+		c1.p.x = 8;
+		System.out.printf("c1의 r: %s\n",c1);
+		System.out.printf("c2의 r: %s\n",c2);
+		System.out.printf("======================================\n");
+		
+		Circle c3 = c1.deepClone();
+		c1.r = 50;
+		c1.p.x = 10000;
+		System.out.println("c1: "+c1);
+		System.out.println("c3: "+c3);
+		System.out.printf("======================================\n");
+		
+		// 배열에서의 clone은 기본으로 되어 있음
+		int[] num = {1,2,3};
+		int[] numCopy = num.clone();
+		numCopy[0] = 100;
+		System.out.println("num[]: "+Arrays.toString(num));
+		System.out.println("numCopy[]: "+Arrays.toString(numCopy));
 	}
-
 }
