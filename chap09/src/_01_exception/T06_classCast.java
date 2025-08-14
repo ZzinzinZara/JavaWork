@@ -14,7 +14,8 @@ public class T06_classCast {
 			
 			// Animal aniDog = dog;
 			Animal aniDog = new Dog();
-			Animal aniCat = cat;
+			//Animal aniCat = cat;
+			Animal aniCat = new Cat();
 			
 			System.out.printf("aniDog를 dog로 형변환\n");
 			dog = (Dog)aniDog; // 가능
