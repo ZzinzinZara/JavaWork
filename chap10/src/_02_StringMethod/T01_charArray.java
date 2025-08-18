@@ -22,9 +22,10 @@ public class T01_charArray {
 		
 		System.out.printf("주민등록번호를 입력하세요 >> ");
 		char num = s.next().charAt(7);
-		System.out.printf("%c\n",num);
 		if(num=='1'||num=='3')System.out.println("남자");
 		else System.out.println("여자");
+		
+		
 	}
 
 }
