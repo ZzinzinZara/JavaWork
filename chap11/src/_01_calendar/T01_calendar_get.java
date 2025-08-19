@@ -25,7 +25,9 @@ public class T01_calendar_get {
 		 */
 		
 		if(ampm==1) {
-			System.out.printf("PM %d시\n",today.get(Calendar.HOUR));
-		} else System.out.printf("AM %d시\n",today.get(Calendar.HOUR));
+			System.out.printf("PM %d시 ",today.get(Calendar.HOUR));
+		} else System.out.printf("AM %d시 ",today.get(Calendar.HOUR));
+		
+		System.out.println(today.get(Calendar.MINUTE)+"분");
 	}
 }
