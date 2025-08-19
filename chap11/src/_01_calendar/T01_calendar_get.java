@@ -16,7 +16,7 @@ public class T01_calendar_get {
 		System.out.println("시간(0~11): "+today.get(Calendar.HOUR));
 		
 		int ampm = today.get(Calendar.AM_PM);
-		System.out.println(ampm); // 0: am, 1: pm
+//		System.out.println(ampm); // 0: am, 1: pm
 		
 		/*
 		 * 출력
