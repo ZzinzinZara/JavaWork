@@ -25,7 +25,7 @@ import java.util.Scanner;
  *   	수락 => 통실할 수 있는 Socket생성
  */
 
-public class ServerSocket_Run {
+public class ServerSocket1 {
 
 	public static void main(String[] args) {
 //		1. 포트번호 지정

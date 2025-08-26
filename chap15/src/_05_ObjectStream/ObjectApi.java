@@ -9,9 +9,11 @@ import java.io.ObjectOutputStream;
 
 /*
  * 보조스트림
- *  ObjectOutputStream/ObjectInputStream: 객체 단위로 입출력할 수 있도록 도움을 주는 스트림
+ *  - ObjectOutputStream/ObjectInputStream: 객체 단위로 입출력할 수 있도록 도움을 주는 스트림
+ *  - 메소드: writeObject() / readObject() 
+ *  - 객체에 toString()을 오버라이딩하지 않으면 readObject()로 읽으면 주소가 들어옴
  * 기반스트림
- *  FileOutputStream/FileInputStream: 파일과 연결하여 1byte단위로 입력한느 스트림
+ *  - FileOutputStream/FileInputStream: 파일과 연결하여 1byte단위로 입력한느 스트림
  */
 
 public class ObjectApi {
