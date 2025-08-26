@@ -62,9 +62,9 @@ public class ServerSocket_Run {
 			pw.flush(); // 현재 스트림의 데이터를 강제로 내보내고 비움
 			
 			while(true) {
-				System.out.print("클라이언트: "+br.readLine());
+				System.out.println("클라이언트: "+br.readLine());
 				
-				System.out.print("서버: ");
+				System.out.println("서버: ");
 				pw.println(s.nextLine());
 				pw.flush();
 			}
